@@ -5,19 +5,19 @@ vue init webpack
 
 > A Vue.js project
 
-## Build Setup
+## 安装依赖
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 启动服务
 npm run dev
 
-# build for production with minification
+# 打包
 npm run build
 
-# build for production and view the bundle analyzer report
+# 打包后查看所用到的技术模块，生成分析图
 npm run build --report
 ```
 
