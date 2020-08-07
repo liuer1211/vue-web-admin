@@ -3,7 +3,7 @@
 # 搭建命令
 vue init webpack
 
-> A Vue.js project
+> vue后台管理系统
 
 ## 安装依赖
 
