@@ -11,9 +11,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  #app{
-    width: 1200px;
-    max-width: 1200px;
-    margin: auto;
-  }
 </style>

@@ -1,17 +1,36 @@
 <template>
   <div class="app-wrapper">
+    <sidebar class="sidebar-container"></sidebar>
+    <div class="main-container">
+      <navbar></navbar>
+      <app-main></app-main>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'layout',
-  components: {
-  },
-  computed: {
+  import { Navbar, Sidebar, AppMain } from './components' // 默认找components下的index.js
+  import ResizeMixin from './mixin/ResizeHandler'
+
+  export default {
+    name: 'layout',
+    components: {
+      Navbar,
+      Sidebar,
+      AppMain
+    },
+    mixins: [ResizeMixin], // 混合js,业务多则分离出来
+    computed: {
+    }
   }
-}
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
+  @import "src/styles/mixin.scss";
+  .app-wrapper {
+    @include clearfix; /*@include 指令可用于包含一混入：*/
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
 </style>
