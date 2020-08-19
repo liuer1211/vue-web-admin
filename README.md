@@ -21,14 +21,15 @@ npm run build
 npm run build --report
 ```
 # 接口使用
-    使用的别人的，完整项目，查看： https://gitee.com/liu_d/mall-admin-web
+    使用的别人的，完整项目，查看： 
+   [mall-admin-web](https://gitee.com/liu_d/mall-admin-web)
 
 # 接口
     1.登陆
     url: http://120.27.63.9:8080/admin/login
     method: post
     code: {"username":"admin","password":"macro123"}
-    result: {"code":200,"message":"操作成功","data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE1OTc4MjA4MDE1MzYsImV4cCI6MTU5ODQyNTYwMX0.NPt12JGI7WTHbDFf0l7lKkGQChwHS37BVPmlmSfKmpNd2HsbHBf-R5jURGZHa3nnuufu9iq_nazlyGH7j9Lqww"}}
+    result: {"code":200,"message":"操作成功","data":{"tokenHead":"Bearer ","token":".wwqwessada.ee-"}}
             {"code":404,"message":"用户名或密码错误","data":null}
 
 
