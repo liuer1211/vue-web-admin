@@ -20,5 +20,15 @@ npm run build
 # 打包后查看所用到的技术模块，生成分析图
 npm run build --report
 ```
+# 接口使用
+    使用的别人的，完整项目，查看： https://gitee.com/liu_d/mall-admin-web
+
+# 接口
+    1.登陆
+    url: http://120.27.63.9:8080/admin/login
+    method: post
+    code: {"username":"admin","password":"macro123"}
+    result: {"code":200,"message":"操作成功","data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE1OTc4MjA4MDE1MzYsImV4cCI6MTU5ODQyNTYwMX0.NPt12JGI7WTHbDFf0l7lKkGQChwHS37BVPmlmSfKmpNd2HsbHBf-R5jURGZHa3nnuufu9iq_nazlyGH7j9Lqww"}}
+            {"code":404,"message":"用户名或密码错误","data":null}
 
 
