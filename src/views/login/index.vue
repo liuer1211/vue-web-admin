@@ -4,7 +4,9 @@
       <img class="login-logo" src="../../assets/login/logo.png" title="logo"/>
       <el-input placeholder="请输入用户名" v-model="loginForm.username" clearable></el-input>
       <el-input placeholder="请输入密码" v-model="loginForm.password" show-password></el-input>
-      <el-button type="primary" :loading="loading" @click.native.prevent="handleLogin">登录</el-button>
+      <el-button type="primary" :loading="loading" @click.native.prevent="handleLogin">
+        登录 <!--如果外层包了from标签 ： @click.native.prevent 阻止默认的form表单提交-->
+      </el-button>
     </div>
   </div>
 </template>
