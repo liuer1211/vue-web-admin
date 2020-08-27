@@ -29,6 +29,24 @@ export const constantRouterMap = [
   }
 ]
 
+// 异步
+export const asyncRouterMap = [
+  {
+    path:'/ums',
+    component: Layout,
+    redirect: '/ums/admin',
+    name: 'ums',
+    meta: {title: '权限', icon: 'ums'},
+    children: [
+      {
+        path: 'admin',
+        name: 'admin',
+        component: () => import('@/views/ums/admin/index'),
+        meta: {title: '用户列表', icon: 'ums-admin'}
+      }
+    ]
+  }
+]
 export default new Router({
   routes:constantRouterMap // 路由集合
 })

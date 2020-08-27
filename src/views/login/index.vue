@@ -7,6 +7,10 @@
       <el-button type="primary" :loading="loading" @click.native.prevent="handleLogin">
         登录 <!--如果外层包了from标签 ： @click.native.prevent 阻止默认的form表单提交-->
       </el-button>
+      <div class="login-cen">
+        用户名：admin
+        密码：macro123
+      </div>
     </div>
   </div>
 </template>
@@ -45,6 +49,7 @@
   .login-main{
     position: relative;
     .login-model{
+      box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
       padding: 50px 30px 30px;
       border: 1px solid #d4d4d4;
       -webkit-box-sizing: border-box;
@@ -66,6 +71,10 @@
         border-radius: 50%;
         -o-object-fit: cover;
         object-fit: cover;
+      }
+      .login-cen{
+        padding-top: 12px;
+        font-size: 12px;
       }
       /deep/ .el-input{
         margin-bottom: 20px;

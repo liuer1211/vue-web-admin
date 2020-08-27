@@ -1,4 +1,4 @@
-import { login} from '@/api/login'
+import { login, logout, getInfo} from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 
 const user = {
@@ -34,11 +34,51 @@ const user = {
           const data = response.data
           const tokenStr = data.tokenHead+data.token
           setToken(tokenStr)
-          // commit('SET_TOKEN', tokenStr)
+          commit('SET_TOKEN', tokenStr)
           resolve(response)
         }).catch(error => {
           reject(error)
         })
+      })
+    },
+    // 获取用户信息                               后台怎么知道token过期了
+    GetInfo({ commit, state }) {
+      return new Promise((resolve, reject) => {
+        getInfo().then(response => {
+          const data = response.data
+          if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
+            commit('SET_ROLES', data.roles)
+          } else {
+            reject('getInfo: roles must be a non-null array !')
+          }
+          commit('SET_NAME', data.username)
+          commit('SET_AVATAR', data.icon)
+          resolve(response)
+        }).catch(error => {
+          debugger
+          reject(error)
+        })
+      })
+    },
+    // 点击退出 登出
+    LogOut({ commit, state }) {
+      return new Promise((resolve, reject) => {
+        logout(state.token).then(() => {
+          commit('SET_TOKEN', '')
+          commit('SET_ROLES', [])
+          removeToken()
+          resolve()
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 前端 登出  登陆过期
+    FedLogOut({ commit }) {
+      return new Promise(resolve => {
+        commit('SET_TOKEN', '')
+        removeToken()
+        resolve()
       })
     }
   }

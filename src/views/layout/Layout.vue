@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper">
+  <div class="app-wrapper" :class="classObj">
     <sidebar class="sidebar-container"></sidebar>
     <div class="main-container">
       <navbar></navbar>
@@ -21,6 +21,21 @@
     },
     mixins: [ResizeMixin], // 混合js,业务多则分离出来
     computed: {
+      sidebar() {
+        this.$store
+        debugger
+        return this.$store.state.app.sidebar
+      },
+      device() {
+        return this.$store.state.app.device
+      },
+      classObj() {
+        return {
+          hideSidebar: !this.sidebar.opened,
+          withoutAnimation: this.sidebar.withoutAnimation,
+          mobile: this.device === 'mobile'
+        }
+      }
     }
   }
 </script>

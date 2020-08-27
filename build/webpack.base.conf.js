@@ -65,9 +65,13 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       },
-      {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+      // {
+      //   test: /\.scss$/,
+      //   loaders: ['style', 'css', 'sass']
+      // }
+      { // 最新的webpack不支持缩写
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
       }
     ]
   },

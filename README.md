@@ -32,4 +32,25 @@ npm run build --report
     result: {"code":200,"message":"操作成功","data":{"tokenHead":"Bearer ","token":".wwqwessada.ee-"}}
             {"code":404,"message":"用户名或密码错误","data":null}
 
-
+# 问题
+    1.最新的webpack不支持缩写
+      { 
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
+      }
+    2.动态路由获取
+      - 首次打开页面（http://localhost:8080），已有token
+        - 路由是login，替换成‘/’,跳到home
+        - 路由不是login
+          - 角色没有值，【没有权限，调接口】
+            - 拉取用户信息，获得动态路由
+            - token过期，掉接口，退出登录
+          - 角色有值，直接跳到，【代表有权限，说明路由已经拼接好了，直接跳转】
+            （token被修改，或者过期，在调接口有拦截去处理，会返回过期信息）
+      - 首次打开页面（http://localhost:8080），没有token
+        - 路由是 /login，跳到login，进行登录
+        - 路由不是 /login，跳到login，进行登录
+    3.layout布局
+      - 菜单栏
+      - 内容页
+    4.echarts使用

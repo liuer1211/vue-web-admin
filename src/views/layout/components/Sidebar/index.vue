@@ -23,16 +23,19 @@
     components: { SidebarItem,ScrollBar },
     data() {
       return {
-        isCollapse: true
       }
     },
     computed: {
       ...mapGetters([
+        'sidebar',
         'routers'
       ]),
       routes() {
         console.log('this.routers-',this.routers)
         return this.routers
+      },
+      isCollapse() {
+        return !this.sidebar.opened
       }
     }
   }
