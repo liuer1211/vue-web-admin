@@ -54,3 +54,6 @@ npm run build --report
       - 菜单栏
       - 内容页
     4.echarts使用
+
+# 结果
+   ![image.png](https://liuer1211.github.io/vue-web-admin/static/img/1.png)
