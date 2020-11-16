@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/', // 这里改了会有报错 default-src
     proxyTable: {},
 
     // Various Dev Server settings

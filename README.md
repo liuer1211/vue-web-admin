@@ -54,6 +54,7 @@ npm run build --report
       - 菜单栏
       - 内容页
     4.echarts使用
+    5.config文件夹中的index.js里面的assets PublicPath: ‘/’--改成‘./’项目运行不起来；打包时候需要改
 
 # 结果
-   ![image.png](https://liuer1211.github.io/vue-web-admin/static/img/1.png)
+   ![image.png](https://liuer1211.github.io/vue-web-admin/static/img/m1.png)
