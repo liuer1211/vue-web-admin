@@ -22,7 +22,7 @@ npm run build --report
 ```
 # 接口使用
     使用的别人的，完整项目，查看： https://gitee.com/liu_d/mall-admin-web
-   [mall-admin-web](https://gitee.com/liu_d/mall-admin-web)
+   [mall-admin-web项目gitee存放地址](https://gitee.com/liu_d/mall-admin-web)，
    [mall-admin-web访问地址](http://www.macrozheng.com/admin/#/login)
 
 # 接口
